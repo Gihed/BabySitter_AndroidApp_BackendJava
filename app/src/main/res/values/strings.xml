@@ -1,0 +1,10 @@
+<resources>
+
+
+        <string name="app_name">MyApplicationMyNanny</string>
+        <string name="login">Username</string>
+        <string name="pass">password</string>
+        <string name="signin">Connect</string>
+        <string name="signup">Connect</string>
+
+</resources>
