@@ -1,4 +1,4 @@
-package com.example.myapplicationmynanny;
+package com.example.bs;
 
 import org.junit.Test;
 
