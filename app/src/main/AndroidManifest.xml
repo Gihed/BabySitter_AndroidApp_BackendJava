@@ -10,8 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MiniApplication_BsAndroid">
         <activity
-            android:name=".SignupActivity"
-            ></activity>
+            android:name=".CustomUserListActivity"></activity>
+        <activity android:name=".SignupActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

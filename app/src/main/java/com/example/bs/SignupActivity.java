@@ -1,22 +1,28 @@
 package com.example.bs;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.bs.data.SQLiteDatabaseHandler;
+import com.example.bs.data.User;
+
 public class SignupActivity extends AppCompatActivity {
 
     EditText etFirstName, etLastName, etEmail, etPassword, etRepeatPassword;
     final int MIN_PASSWORD_LENGTH = 6;
+    SQLiteDatabaseHandler db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
-
+        db= new SQLiteDatabaseHandler(this);
         viewInitializations();
     }
 
@@ -81,7 +87,8 @@ public class SignupActivity extends AppCompatActivity {
     // Hook Click Event
 
     public void performSignUp (View v) {
-        if (validateInput()) {
+//        if (validateInput()) {
+        if (true) {
 
             // Input is valid, here send data to your server
 
@@ -91,9 +98,12 @@ public class SignupActivity extends AppCompatActivity {
             String password = etPassword.getText().toString();
             String repeatPassword = etRepeatPassword.getText().toString();
 
-            Toast.makeText(this,"Login Success",Toast.LENGTH_SHORT).show();
+            User newUser = new User(firstName, lastName, email, password, false, true);
+            db.addUser(newUser);
             // Here you can call you API
-
+            Toast.makeText(this,"User added Success",Toast.LENGTH_SHORT).show();
+            Intent i = new Intent(SignupActivity.this, MainActivity.class);
+            startActivity(i);
         }
     }
 

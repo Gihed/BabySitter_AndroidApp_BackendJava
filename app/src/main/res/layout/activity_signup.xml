@@ -9,29 +9,30 @@
     android:background="#000">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="333dp"
-        android:layout_height="650dp"
-        android:layout_margin="40dp"
-        android:background="#fff"
+        android:layout_margin="64dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         card_view:cardCornerRadius="8dp"
-        card_view:cardElevation="8dp">
+        card_view:cardElevation="8dp"
+        android:background="#fff">
+
 
         <ScrollView
-            android:layout_width="291dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
             <LinearLayout
-                android:layout_width="271dp"
-                android:layout_height="591dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="25dp">
+                android:padding="24dp">
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="38dp"
+                    android:layout_width="258dp"
+                    android:layout_height="103dp"
                     android:layout_gravity="center_horizontal"
-                    android:text="@string/login_form_title"
+                    android:text="@string/signup_form_title"
                     android:textAlignment="center"
                     android:textSize="36sp" />
 
@@ -43,8 +44,8 @@
 
                 <EditText
                     android:id="@+id/sign_up_activity_firstNameEditText"
-                    android:layout_width="232dp"
-                    android:layout_height="31dp"
+                    android:layout_width="415dp"
+                    android:layout_height="57dp"
                     android:inputType="text" />
 
                 <TextView
@@ -55,7 +56,7 @@
 
                 <EditText
                     android:id="@+id/sign_up_activity_lastNameEditText"
-                    android:layout_width="match_parent"
+                    android:layout_width="419dp"
                     android:layout_height="wrap_content"
                     android:inputType="text" />
 
@@ -67,7 +68,7 @@
 
                 <EditText
                     android:id="@+id/sign_up_activity_emailEditText"
-                    android:layout_width="match_parent"
+                    android:layout_width="419dp"
                     android:layout_height="wrap_content"
                     android:inputType="text" />
 
@@ -80,7 +81,7 @@
 
                 <EditText
                     android:id="@+id/sign_up_activity_passwordEditText"
-                    android:layout_width="match_parent"
+                    android:layout_width="419dp"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword" />
 
@@ -92,7 +93,7 @@
 
                 <EditText
                     android:id="@+id/sign_up_activity_rePasswordEditText"
-                    android:layout_width="match_parent"
+                    android:layout_width="418dp"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword" />
 
@@ -104,7 +105,7 @@
                     <RadioButton
                         android:id="@+id/radioMale"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="75dp"
                         android:checked="true"
                         android:text="@string/radio_male" />
 
@@ -118,8 +119,9 @@
 
                 <Button
                     android:id="@+id/sign_up_activity_signupButton"
-                    android:layout_width="match_parent"
+                    android:layout_width="426dp"
                     android:layout_height="wrap_content"
+                    android:onClick="performSignUp"
                     android:text="@string/login_form_signup"
                     android:textSize="22sp" />
 
